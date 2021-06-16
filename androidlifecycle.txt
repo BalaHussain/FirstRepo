@@ -1,0 +1,39 @@
+life Cycle of android & activity life cycle:
+   "ACTIVTY IS A SINGLE SCREEN IN THE APPLICATION WITH SOME USERINTERFACE COMPONENTS IT IS JAVA FILE"
+1:activity having four states:
+::::Does not exist;activity does not existed
+::::foreground:once click on app an activity comes from doesn't exist state to foreground it will call oncreate(),onstart(),OnResume
+::::BackGround:by calling someother activity in foreground state the current state will go the backgreound state here
+we ara having two methods onPause(),onStop() 
+::::pause the current visible activty if in case we are pressing the powerbutton and and some other call is arrived the state goes pause state by using onPause() method
+and if we want to goback to that activity by using onResume() method this helps us to activity goes to pause state to foreground state.
+The current activity is destroyed by using onPause(),onStop(),onDestroy(). 
+we are having seven methods:
+1.on create()
+2.onStart()
+3.onResume()
+4.onPause()
+5.onRestart()
+6..onStop()
+7.onDestroy()
+
+
+
+Layouts:
+A great Android app not only needs to have a beautiful UI, but also optimized performance. You need to control where and how views appear on your users’ screens.
+
+Android provides various types of layouts which use different methods to contain child views and determine their positions.
+ Layouts all descend from the ViewGroup class.
+
+Some of the most common layouts to use when building your Android UI are FrameLayout, LinearLayout and RelativeLayout.
+ They are easy to use, but they each have certain limitations and performance issues when the view hierarchy becomes complex:
+
+FrameLayout can only position child views by applying gravity relative to their parent.
+LinearLayout doesn’t allow views to overlap one another. Most of the time, you have to use multiple nested LinearLayouts.
+RelativeLayout is expensive because it always does two measure passes.
+Nested LinearLayouts with layout_weight and nested RelativeLayouts increase the layout cost exponentially. 
+That’s where ConstraintLayout comes to the rescue.
+
+ConstraintLayout, which is now the default layout in Android Studio, gives you many ways to place objects.
+ You can constrain them to their container, to one another or to guidelines. This allows you to create large, complex, dynamic and responsive views in flat hierarchy. 
+It even supports animations!
